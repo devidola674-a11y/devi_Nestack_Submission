@@ -2,6 +2,4 @@ fastapi
 uvicorn
 pymupdf
 chromadb
-sentence-transformers
-torch
 numpy
