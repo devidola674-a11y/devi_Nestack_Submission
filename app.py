@@ -5,8 +5,6 @@ import chromadb
 
 app = FastAPI(title="PDF Vector Search API")
 
-# Load embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Connect to ChromaDB
 client = chromadb.PersistentClient(path="./chroma_db")
