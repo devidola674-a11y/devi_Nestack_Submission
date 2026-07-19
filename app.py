@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import chromadb
-from sentence_transformers import SentenceTransformer
+
 
 app = FastAPI(title="PDF Vector Search API")
 
@@ -20,7 +20,7 @@ class QueryRequest(BaseModel):
 
 @app.post("/query")
 def search(request: QueryRequest):
-    query_embedding = model.encode(request.query).tolist()
+    return [0.0]*384
 
     results = collection.query(
         query_embeddings=[query_embedding],
