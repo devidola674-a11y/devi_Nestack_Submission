@@ -8,7 +8,7 @@ app = FastAPI(title="PDF Vector Search API")
 
 # Connect to ChromaDB
 client = chromadb.PersistentClient(path="./chroma_db")
-collection = client.get_collection("pdf_chunks")
+collection = client.get_or_create_collection("pdf_chunks")
 
 
 class QueryRequest(BaseModel):
